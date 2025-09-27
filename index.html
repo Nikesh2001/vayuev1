@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Scooters Website</title>
+
+  <!-- fullPage.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .bannerone {
+      margin-top: 56px;
+      /* pehle banner ke liye */
+    }
+
+    .bannertwo {
+      margin-top: 50px;
+      width: 90vh;
+    }
+
+    .bannerthree {
+      /* margin-top: 50px;   */
+    }
+
+
+    /* .section:first-child {
+      margin-top: 50px;  
+    } */
+
+
+    /* nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    } */
+
+    /* nav a:hover {
+      color: #4caf50;
+    } */
+
+    /* Swiper Banner */
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .swiper-slide h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .swiper-slide p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    /* About Section */
+    .section2 {
+      /* background: #f5f5f5; */
+      background-color: #EEEEEE;
+      background-image: url('img/team.png');
+      background-size: cover;   /* image ko full cover karne ke liye */
+      background-position: center; /* center se adjust karega */
+      background-repeat: no-repeat; /* repeat nahi hoga */
+
+
+
+      
+      color: black;
+      padding: 60px;
+
+    }
+
+    .section2 h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .section2 p {
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* Services (Scooter Models) */
+    .section3 {
+      background: #ffffff;
+      color: black;
+      padding: 60px;
+    }
+
+    .section3 h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: #fff;
+      color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .service-card h3 {
+      margin: 15px 0 5px;
+    }
+
+    .service-card p {
+      margin: 0 0 10px;
+    }
+
+    .service-card span {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: #4caf50;
+    }
+
+    /* Contact Section */
+    .section4 {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 60px;
+      text-align: center;
+    }
+
+    .section4 h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #4caf50;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #43a047;
+    }
+
+    /*  */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: #fff;
+      color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 15px;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+    }
+
+    .service-card h3 {
+      margin: 15px 0 5px;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: #555;
+    }
+
+    /*  */
+
+    .main-heading {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #6c6c6c;
+    }
+
+    .explore-btn {
+      border: 2px solid red;
+      color: red;
+      font-weight: bold;
+    }
+
+    .explore-btn:hover {
+      background-color: red;
+      color: white;
+    }
+
+    /* .navbar-nav a{
+      color: white;
+    } */
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+      content: 'next';
+      display: none;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+      content: 'prev';
+      display: none;
+    }
+
+    #fp-nav ul li a.active span,
+    #fp-nav ul li:hover a.active span,
+    .fp-slidesNav ul li a.active span,
+    .fp-slidesNav ul li:hover a.active span {
+      width: 16px;
+      height: 16px;
+      border: 5px solid red;
+      background-color: white;
+    }
+
+    #fp-nav ul li a span,
+    .fp-slidesNav ul li a span {
+      width: 7px;
+      height: 7px;
+      background-color: red;
+    }
+
+    /*  */
+
+    @media screen and (max-width: 767px) {
+      .bannerone {
+        background-image: url(image/m1.png);
+        /* Mobile size - Library banner */
+        /* max-width: 100%;
+              background-size: cover;
+              background-position: center center;
+              background-repeat: no-repeat;
+              height: 110vh; */
+      }
+    }
+
+    /* Tablet and above (Laptop view) */
+    @media screen and (min-width: 768px) {
+      .bannerone {
+        background-image: url('image/b11.png');
+        /* Laptop size - Scooter banner */
+        background-size: cover;
+        /* background-position: center center; */
+        /* background-repeat: no-repeat; */
+      }
+    }
+
+    /* banner2 */
+
+    @media screen and (max-width: 767px) {
+      .bannertwo {
+        background-image: url('image/1.png');
+        /* Mobile size - Library banner */
+        /* max-width: 100%;
+              background-size: cover;
+              background-position: center center;
+              background-repeat: no-repeat;
+              height: 90vh; */
+      }
+    }
+
+    /* Tablet and above (Laptop view) */
+    @media screen and (min-width: 768px) {
+      .bannertwo {
+        background-image: url('image/b15.png');
+        /* Laptop size - Scooter banner */
+        background-size: cover;
+        /* background-position: center center; */
+        /* background-repeat: no-repeat; */
+      }
+    }
+
+    /* banner3 */
+
+    @media screen and (max-width: 767px) {
+      .bannerthree {
+        background-image: url('image/2.png');
+        /* Mobile size - Library banner */
+        /* max-width: 100%;
+              background-size: cover;
+              background-position: center center;
+              background-repeat: no-repeat;
+              height: 90vh; */
+      }
+    }
+
+    /* Tablet and above (Laptop view) */
+    @media screen and (min-width: 768px) {
+      .bannerthree {
+        background-image: url('image/b12.png');
+        /* Laptop size - Scooter banner */
+        background-size: cover;
+        /* background-position: center center; */
+        /* background-repeat: no-repeat; */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <section>
+    <nav class="navbar navbar-dark fixed-top" style="background-color: #000000;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Shop</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blogs</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+
+
+  <!-- Navigation -->
+  <!-- <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav> -->
+
+  <!-- fullPage Container -->
+  <div id="fullpage">
+
+    <!-- Home with Swiper Banner -->
+    <div class="section" data-anchor="home">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bannerone">
+            <!-- <h2>Electric Future</h2>
+            <p>Ride smart with the latest EV scooters.</p> -->
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide bannertwo">
+            <!-- <h2>Eco-Friendly</h2>
+            <p>Save the planet while saving fuel costs.</p> -->
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide bannerthree">
+            <!-- <h2>Smart Design</h2>
+            <p>Stylish, modern and perfect for urban rides.</p> -->
+          </div>
+        </div>
+        <!-- Swiper Pagination + Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="section section2" data-anchor="about">
+
+      <section style="display: flex; justify-content: space-evenly;">
+        <div class="about-text" style="width: 500px;">
+        <h5>About Us</h5>
+        <h1>Who We Are?</h1>
+        <p>
+          Warivo Motor India Pvt Ltd is a pioneer in the electric mobility industry,
+          based in Haryana, India. We are dedicated to creating innovative, reliable,
+          and eco-friendly transportation solutions that cater to the diverse needs
+          of Indian families. Our state-of-the-art e-bikes and scooters are designed
+          to provide unmatched comfort and performance, ensuring a smooth and
+          enjoyable ride for all.
+        </p>
+        <a href="#" class="btn" style="border: 2px solid white; margin-top: 20px;">Explore</a>
+      </div>
+
+      <div class="about-video">
+        <iframe src="https://www.youtube.com/embed/D2E7w9rQlhg" title="YouTube video" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+
+      </section>
+      
+
+      
+    </div>
+
+    <!-- Services (Models + Price) -->
+    <!-- Services (Scooter Models) -->
+    <div class="section section3" data-anchor="services">
+
+
+
+
+
+
+
+      <div class="container py-5">
+        <!-- Header and Explore Button -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h1 class="main-heading">Let’s charge up the EVolution</h1>
+          <button class="btn explore-btn">Explore</button>
+        </div>
+
+        <!-- Scooter Grid -->
+        <div class="row g-4">
+          <!-- Scooter 1 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card scooter-card border-0">
+              <img src="ll6.png" class="card-img-top" alt="CRX" />
+              <div class="card-body text-center">
+                <h5 class="card-title">CRX</h5>
+                <p class="card-text">Class Comfortable Riding</p>
+              </div>
+            </div>
+          </div>
+          <!-- Scooter 2 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card scooter-card border-0">
+              <img src="ll.png" class="card-img-top" alt="Nova S" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Nova S</h5>
+                <p class="card-text">Elevate Your Ride with Nova-S</p>
+              </div>
+            </div>
+          </div>
+          <!-- Scooter 3 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card scooter-card border-0">
+              <img src="ll1.png" class="card-img-top" alt="Nova X" />
+              <div class="card-body text-center">
+                <h5 class="card-title"><u>Nova X</u></h5>
+                <p class="card-text"><strong>The Next-Gen Bluetooth Connectivity</strong> Scooter.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Scooter 4 -->
+          <div class="col-md-3 col-sm-6">
+            <div class="card scooter-card border-0">
+              <img src="ll3.png" class="card-img-top" alt="Nova" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Nova</h5>
+                <p class="card-text">The bright illumination, sleek dashboard...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Contact -->
+    <div class="section section4" data-anchor="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="tel" placeholder="Your Phone" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Initialize fullPage.js
+    new fullpage('#fullpage', {
+      autoScrolling: true,
+      navigation: true,
+      anchors: ['home', 'about', 'services', 'contact'],
+      navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
+      showActiveTooltip: true,
+      scrollHorizontally: false,
+      scrollingSpeed: 1200 // (default 700 hai, ise bada karne se dheere hoga)
+    });
+
+    // Initialize Swiper
+    new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>
