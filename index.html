@@ -8,6 +8,8 @@
 
   <!-- fullPage.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.css" />
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -15,429 +17,54 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .bannerone {
-      margin-top: 56px;
-      /* pehle banner ke liye */
-    }
-
-    .bannertwo {
-      margin-top: 50px;
-      width: 90vh;
-    }
-
-    .bannerthree {
-      /* margin-top: 50px;   */
-    }
-
-
-    /* .section:first-child {
-      margin-top: 50px;  
-    } */
-
-
-    /* nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      transition: color 0.3s;
-    } */
-
-    /* nav a:hover {
-      color: #4caf50;
-    } */
-
-    /* Swiper Banner */
-    .swiper {
-      width: 100%;
-      height: 100vh;
-    }
-
-    .swiper-slide {
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: #fff;
-      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    }
-
-    .swiper-slide h2 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .swiper-slide p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    /* About Section */
-    .section2 {
-      /* background: #f5f5f5; */
-      background-color: #EEEEEE;
-      background-image: url('img/team.png');
-      background-size: cover;   /* image ko full cover karne ke liye */
-      background-position: center; /* center se adjust karega */
-      background-repeat: no-repeat; /* repeat nahi hoga */
-
-
-
-      
-      color: black;
-      padding: 60px;
-
-    }
-
-    .section2 h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .section2 p {
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.8;
-    }
-
-    /* Services (Scooter Models) */
-    .section3 {
-      background: #ffffff;
-      color: black;
-      padding: 60px;
-    }
-
-    .section3 h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .service-card {
-      background: #fff;
-      color: #222;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .service-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .service-card h3 {
-      margin: 15px 0 5px;
-    }
-
-    .service-card p {
-      margin: 0 0 10px;
-    }
-
-    .service-card span {
-      display: block;
-      margin-bottom: 15px;
-      font-weight: bold;
-      color: #4caf50;
-    }
-
-    /* Contact Section */
-    .section4 {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 60px;
-      text-align: center;
-    }
-
-    .section4 h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input,
-    textarea {
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
-
-    button {
-      background: #4caf50;
-      color: #fff;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #43a047;
-    }
-
-    /*  */
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .service-card {
-      background: #fff;
-      color: #222;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      padding: 15px;
-    }
-
-    .service-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: contain;
-    }
-
-    .service-card h3 {
-      margin: 15px 0 5px;
-      font-size: 1.3rem;
-      font-weight: bold;
-    }
-
-    .service-card p {
-      font-size: 0.95rem;
-      margin: 0;
-      color: #555;
-    }
-
-    /*  */
-
-    .main-heading {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #6c6c6c;
-    }
-
-    .explore-btn {
-      border: 2px solid red;
-      color: red;
-      font-weight: bold;
-    }
-
-    .explore-btn:hover {
-      background-color: red;
-      color: white;
-    }
-
-    /* .navbar-nav a{
-      color: white;
-    } */
-
-    .swiper-button-next:after,
-    .swiper-rtl .swiper-button-prev:after {
-      content: 'next';
-      display: none;
-    }
-
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after {
-      content: 'prev';
-      display: none;
-    }
-
-    #fp-nav ul li a.active span,
-    #fp-nav ul li:hover a.active span,
-    .fp-slidesNav ul li a.active span,
-    .fp-slidesNav ul li:hover a.active span {
-      width: 16px;
-      height: 16px;
-      border: 5px solid red;
-      background-color: white;
-    }
-
-    #fp-nav ul li a span,
-    .fp-slidesNav ul li a span {
-      width: 7px;
-      height: 7px;
-      background-color: red;
-    }
-
-    /*  */
-
-    @media screen and (max-width: 767px) {
-      .bannerone {
-        background-image: url('img/googlelab/cvayu1.jpeg');
-        /* Mobile size - Library banner */
-        /* max-width: 100%;
-              background-size: cover;
-              background-position: center center;
-              background-repeat: no-repeat;
-              height: 110vh; */
-      }
-    }
-
-    /* Tablet and above (Laptop view) */
-    @media screen and (min-width: 768px) {
-      .bannerone {
-        background-image: url('image/b11.png');
-        /* Laptop size - Scooter banner */
-        background-size: cover;
-        /* background-position: center center; */
-        /* background-repeat: no-repeat; */
-      }
-    }
-
-    /* banner2 */
-
-    @media screen and (max-width: 767px) {
-      .bannertwo {
-        background-image: url('img/googlelab/cvayu2.jpeg');
-        /* Mobile size - Library banner */
-        /* max-width: 100%;
-              background-size: cover;
-              background-position: center center;
-              background-repeat: no-repeat;
-              height: 90vh; */
-      }
-    }
-
-    /* Tablet and above (Laptop view) */
-    @media screen and (min-width: 768px) {
-      .bannertwo {
-        background-image: url('image/b15.png');
-        /* Laptop size - Scooter banner */
-        background-size: cover;
-        /* background-position: center center; */
-        /* background-repeat: no-repeat; */
-      }
-    }
-
-    /* banner3 */
-
-    @media screen and (max-width: 767px) {
-      .bannerthree {
-        background-image: url('img/googlelab/cvayu3.jpeg');
-        /* Mobile size - Library banner */
-        /* max-width: 100%;
-              background-size: cover;
-              background-position: center center;
-              background-repeat: no-repeat;
-              height: 90vh; */
-      }
-    }
-
-    /* Tablet and above (Laptop view) */
-    @media screen and (min-width: 768px) {
-      .bannerthree {
-        background-image: url('image/b12.png');
-        /* Laptop size - Scooter banner */
-        background-size: cover;
-        /* background-position: center center; */
-        /* background-repeat: no-repeat; */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 
 <body>
 
 
   <section>
-    <nav class="navbar navbar-dark fixed-top" style="background-color: #000000;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Offcanvas dark navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blogs</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-              </li>
-
-            </ul>
-
-          </div>
-        </div>
+    <nav class="navbar fixed-top" style="background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/vayuev_logo.png" style="width: 50px; margin-left: 45px;" alt="">
+    </a>
+    
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+          <img src="img/vayuev_logo.png" alt="" style="width: 45px;">
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-    </nav>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About us</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="#">Product us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
   </section>
 
-
-
-  <!-- Navigation -->
-  <!-- <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav> -->
 
   <!-- fullPage Container -->
   <div id="fullpage">
@@ -452,7 +79,7 @@
             <p>Ride smart with the latest EV scooters.</p> -->
           </div>
           <!-- Slide 2 -->
-          <div class="img-fluid swiper-slide bannertwo">
+          <div class=" swiper-slide bannertwo">
             <!-- <h2>Eco-Friendly</h2>
             <p>Save the planet while saving fuel costs.</p> -->
           </div>
@@ -472,19 +99,14 @@
     <!-- About -->
     <div class="section section2" data-anchor="about">
 
-      <section style="display: flex; justify-content: space-evenly;">
-        <div class="about-text" style="width: 500px;">
-        <h5>About Us</h5>
+      <section style="display: flex; justify-content: space-between;">
+        <div class="about-text">
+        <h5 style="background-color: #ff3a4c; width: 85px; height: 30px; padding: 5px 9px 5px 10px; border: none; font-size: 15px; font-weight: 400;">About Us</h5>
         <h1>Who We Are?</h1>
         <p>
-          Warivo Motor India Pvt Ltd is a pioneer in the electric mobility industry,
-          based in Haryana, India. We are dedicated to creating innovative, reliable,
-          and eco-friendly transportation solutions that cater to the diverse needs
-          of Indian families. Our state-of-the-art e-bikes and scooters are designed
-          to provide unmatched comfort and performance, ensuring a smooth and
-          enjoyable ride for all.
+          Vayu EV is a leading name in the electric mobility space, based in Haryana, India. We specialize in cutting-edge, eco-friendly electric scooters designed for modern Indian commuters. Our mission is to provide reliable, affordable, and sustainable transportation solutions that cater to the everyday needs of Indian families and individuals.
         </p>
-        <a href="#" class="btn" style="border: 2px solid white; margin-top: 20px;">Explore</a>
+        <a href="#" class="btn" style="border: 2px solid white; margin-top: 20px; color: white;">Explore</a>
       </div>
 
       <div class="about-video">
@@ -501,13 +123,6 @@
     <!-- Services (Models + Price) -->
     <!-- Services (Scooter Models) -->
     <div class="section section3" data-anchor="services">
-
-
-
-
-
-
-
       <div class="container py-5">
         <!-- Header and Explore Button -->
         <div class="d-flex justify-content-between align-items-center mb-4">
@@ -564,7 +179,8 @@
 
     <!-- Contact -->
     <div class="section section4" data-anchor="contact">
-      <h2>Contact Us</h2>
+      <h2>Get In Touch</h2>
+      <p>We'd love to hear from you! Please fill out the form below</p>
       <form>
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
@@ -572,6 +188,169 @@
         <textarea placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
+    </div>
+
+    <div class="section section5" data-anchor="footer">
+       <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.6438898557603!2d77.06571977533474!3d28.610458175676722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d050043a8e541%3A0x1c1af5dbcc4ebb75!2sVAYU%20EV!5e0!3m2!1sen!2sin!4v1760860940545!5m2!1sen!2sin"
+        style="border:0; width: 100%; height: 50vh; display: block;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google Map showing VAYU EV">
+      </iframe>
+
+      <!-- Footer (Bottom 50vh) -->
+  <!-- <footer class="footer">
+    <h2>Contact Us</h2>
+    <p>Email: support@vayuev.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: VAYU EV, Delhi, India</p>
+  </footer> -->
+
+      <footer
+          class="text-center text-lg-start text-white"
+          style="background-color: #1c2331"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-2"
+             style="background-color: #6351ce"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+       
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Vayu Ev</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              Vayu EV is a smart, eco-friendly electric scooter brand offering reliable performance, modern design, and sustainable mobility solutions for urban commuters across India.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Products</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-white">Ather 450X – 111 km Range</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Bajaj Chetak EV</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Hero Vida V1</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Ola S1 Pro</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Useful links</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#!" class="text-white">Home</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">About us</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Product</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Contact us</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> Vayu Ev Uttam nagar, delhi-110055</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2020 Copyright:
+      <a class="text-white" href="https://vayuev.in/"
+         >vayuev.in</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+    </div>
+  </div>
+</div>
+
     </div>
 
   </div>
@@ -582,35 +361,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="script.js"></script>  
 
   <script>
-    // Initialize fullPage.js
-    new fullpage('#fullpage', {
-      autoScrolling: true,
-      navigation: true,
-      anchors: ['home', 'about', 'services', 'contact'],
-      navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
-      showActiveTooltip: true,
-      scrollHorizontally: false,
-      scrollingSpeed: 1200 // (default 700 hai, ise bada karne se dheere hoga)
-    });
-
-    // Initialize Swiper
-    new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+    
   </script>
 </body>
 
